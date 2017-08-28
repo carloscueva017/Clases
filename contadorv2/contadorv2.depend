@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1503959981 source:d:\+evilmaster\contadorv2\main.c
+	<stdio.h>
+	<stdlib.h>
+
