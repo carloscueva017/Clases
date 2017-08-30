@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1504047588 source:d:\+evilmaster\funcionesbibliotecas\calculadora.c
+	<stdio.h>
+	<stdlib.h>
+
+1504048513 source:d:\+evilmaster\funcionesbibliotecas\main.c
+	<stdio.h>
+	<stdlib.h>
+	"calculadora.h"
+
+1504047174 d:\+evilmaster\funcionesbibliotecas\calculadora.h
+
