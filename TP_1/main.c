@@ -2,11 +2,6 @@
 #include <stdlib.h>
 #include "funciones.h"
 
-int suma(int num1,int num2);
-int resta(int num1,int num2);
-float division(float num1,float num2);
-int multiplicacion(int num1,int num2);
-
 int main()
 {
     int op1=0,op2=0,resultado;
@@ -16,7 +11,7 @@ int main()
 
     while(seguir=='s')
     {
-        printf("1- Ingresar 1er operando (A=%d)\n",op1);
+        printf("\n1- Ingresar 1er operando (A=%d)\n",op1);
         printf("2- Ingresar 2do operando (B=%d)\n",op2);
         printf("3- Calcular la suma (%d+%d)\n",op1,op2);
         printf("4- Calcular la resta (%d-%d)\n",op1,op2);
@@ -33,10 +28,12 @@ int main()
             case 1:
                 printf("Ingrese Numero 1: ");
                 scanf("%d",&op1);
+                system("cls");
                 continue;
             case 2:
                 printf("Ingrese Numero 2: ");
                 scanf("%d",&op2);
+                system("cls");
                 continue;
             case 3:
                 resultado=suma(op1,op2);
@@ -56,7 +53,7 @@ int main()
                 continue;
             case 7:
                 resultado=factorial(op1);
-                printf("Factorial: %d-\n",resultado);
+                printf("Factorial: %d \n",resultado);
                 continue;
             case 8:
                 resultado=suma(op1,op2);
