@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1504567582 source:d:\+evilmaster\arrrayejemplo\main.c
+	<stdio.h>
+	<stdlib.h>
+
