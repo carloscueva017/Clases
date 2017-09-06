@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1504652454 source:d:\+evilmaster\cadenas\main.c
+	<stdio.h>
+	<stdlib.h>
+
