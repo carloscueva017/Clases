@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX 5
+
+int main(void){
+    int nota[MAX], notaAux, i, j;
+    char nombre[MAX][31], nombreAux[31];
+
+    for(i=0; i<MAX; i++){
+        system("cls");
+        printf("Ingrese el nota: ");
+        scanf("%d", &nota[i]);
+
+        printf("Ingrese el nombre: ");
+        fflush(stdin);
+        gets(nombre[i]);
+    }
+
+    for(i=0; i<MAX-1; i++){
+
+        for(j=i+1; j<MAX; j++){
+
+            if(nota[i] < nota[j]){
+                strcpy(nombreAux, nombre[i]);
+                strcpy(nombre[i], nombre[j]);
+                strcpy(nombre[j], nombreAux);
+
+                notaAux = nota[i];
+                nota[i] = nota[j];
+                nota[j] = notaAux;
+            }
+
+            if(nota[i] == nota[j]){
+
+                if(strcmp(nombre[i],nombre[j]) > 0){
+
+                    strcpy(nombreAux, nombre[i]);
+                    strcpy(nombre[i], nombre[j]);
+                    strcpy(nombre[j], nombreAux);
+                    /*notaAux = nota[i];
+                    nota[i] = nota[j];
+                    nota[j] = notaAux;*/
+                }
+            }
+        }
+    }
+
+    system("cls");
+    printf("\nnota\tNombre");
+
+    for(i=0; i<MAX; i++){
+        printf("\n%d\t%s", nota[i], nombre[i]);
+    }
+
+    return 0;
+}
