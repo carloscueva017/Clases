@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define CANT 5
+
+typedef struct{
+    int dia, mes, anio;
+}EFecha;
+
+typedef struct{
+    int legajo;
+    char nombre[31];
+    EFecha fechaNac;
+}EAlumno;
+
+int main()
+{
+    EAlumno alumnos[5];
+    int i;
+
+    for(i=0; i<5; i++){
+        system("cls");
+
+        printf("Legajo:");
+        scanf("%d", &alumnos[i].legajo);
+
+        printf("\nNombre:");
+        setbuf(stdin, NULL);
+        scanf("%[^\n]", alumnos[i].nombre);
+
+        printf("\nDia:");
+        scanf("%d", &alumnos[i].fechaNac.dia);
+
+        printf("\nMes:");
+        scanf("%d", &alumnos[i].fechaNac.mes);
+
+        printf("\nAño:");
+        scanf("%d", &alumnos[i].fechaNac.anio);
+    }
+
+    system("cls");
+
+    printf("Legajo\tNombre\t\tDia\tMes\tAño\n\n");
+
+    for(i=0; i<5; i++){
+        printf("%d\t%s\t\t%d\t%d\t%d\n", alumnos[i].legajo, alumnos[i].nombre, alumnos[i].fechaNac.dia, alumnos[i].fechaNac.mes, alumnos[i].fechaNac.anio);
+    }
+
+    return 0;
+}
