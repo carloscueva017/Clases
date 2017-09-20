@@ -1,11 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include "funciones.h"
 
 
 int main()
 {
-    EPersona personas[5];
+    EPersona xxx[20];
+
+    //inicializacion(listaPersonas);
 
     char seguir='s';
     int opcion=0;
@@ -23,14 +26,10 @@ int main()
         switch(opcion)
         {
             case 1:
-                printf("Ingrese nombre:");
-                fflush(stdin);
-                scanf("%[^\n]",pers.nombre);
-                printf("\nIngrese DNI:");
-                scanf("%d",pers.dni);
+                agregarPersona(xxx);
                 continue;
             case 2:
-                printf("Nombre: %s \t Edad: %d",pers.nombre,pers.dni);
+                borrarPersona(xxx);
                 break;
             case 3:
 

@@ -1,6 +1,6 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
-#define CANT 2
+
 typedef struct {
 
     char nombre[50];
@@ -10,12 +10,20 @@ typedef struct {
 
 }EPersona;
 
+/** \brief Inicializacion - inicializa las variables de estado en 0.
+*   \param x - valor de iteracion.
+*/
+int inicializacion(EPersona lista[]);
+
+int agregarPersona(EPersona lista[]);
+int borrarPersona(EPersona lista[]);
+
 /**
  * Obtiene el primer indice libre del array.
  * @param lista el array se pasa como parametro.
  * @return el primer indice disponible
  */
-int obtenerEspacioLibre(EPersona lista[]);
+int obtenerEspacioLibre(EPersona lista[], int pos);
 
 /**
  * Obtiene el indice que coincide con el dni pasado por parametro.
